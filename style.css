@@ -5,25 +5,32 @@
 }
 
 body {
-    font-family: "Cinzel", serif;
-    font-optical-sizing: auto;
-    /* Make sure your browser supports this property */
-    font-weight: 400;
-    /* Change this to the desired weight, e.g., 400 for normal, 700 for bold */
-    font-style: normal;
     background-color: black;
+    background: linear-gradient(90deg, #000000 0%, #76ffac 100%);
+
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    background: linear-gradient(90deg, #000000 0%, #484747 100%);
     align-items: center;
     padding: 10px 30px;
-    border-radius: 0px 0px 20px 20px;
+    height: 10vh;
 }
 
-h1 {
-    margin-top: 0px;
-    margin-left: 0px;
+.heading {
+    margin-left: 150px;
+    margin-top: 100px;
+}
+
+.heading p {
+    font-size: 15px;
+    font-family: "Wittgenstein", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.heading h1 {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
 }
