@@ -7,13 +7,55 @@
 body {
     background-color: black;
     background: linear-gradient(90deg, #000000 0%, #76ffac 100%);
-
 }
 
 header {
+    display: flex;
+    justify-content: center;
     align-items: center;
     padding: 10px 30px;
     height: 10vh;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 23px;
+    position: relative; /* Add position relative */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    display: inline-block; /* Ensure the a tag is inline-block */
+    padding-bottom: 5px; /* Add some padding at the bottom */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0; /* Align the underline with the bottom of the a tag */
+    left: 50%;
+    background-color: #6eeda0;
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0%;
+}
+
+nav ul li a:hover{
+    color: #6eeda0;
 }
 
 .heading {
@@ -22,7 +64,7 @@ header {
 }
 
 .heading p {
-    font-size: 15px;
+    font-size: 13px;
     font-family: "Wittgenstein", serif;
     font-optical-sizing: auto;
     font-style: normal;
