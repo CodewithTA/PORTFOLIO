@@ -5,8 +5,9 @@
 }
 
 body {
-    background-color: black;
-    background: linear-gradient(90deg, #000000 0%, #76ffac 100%);
+    background: url('https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430879.jpg?t=st=1720465407~exp=1720469007~hmac=4958278a5496396522a15b7fa9ea3a6112e20992c07500f97a3f8f13494d7f4c&w=1060') no-repeat center center fixed;
+    background-size: calc(100% + 10px) auto; /* Adjust size to remove the white space */
+    background-position: left center; /* Adjust position to center after resizing */
 }
 
 header {
@@ -45,17 +46,13 @@ nav ul li a::after {
     height: 2px;
     bottom: 0; /* Align the underline with the bottom of the a tag */
     left: 50%;
-    background-color: #6eeda0;
+    background-color: #ffffff;
     transition: width 0.4s ease, left 0.4s ease;
 }
 
 nav ul li a:hover::after {
     width: 100%;
     left: 0%;
-}
-
-nav ul li a:hover{
-    color: #6eeda0;
 }
 
 .heading {
