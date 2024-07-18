@@ -4,6 +4,10 @@
     color: white;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: url('https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430879.jpg?t=st=1720465407~exp=1720469007~hmac=4958278a5496396522a15b7fa9ea3a6112e20992c07500f97a3f8f13494d7f4c&w=1060') no-repeat center center fixed;
     background-size: calc(100% + 20px);
@@ -18,14 +22,17 @@ header {
     justify-content: center;
     align-items: center;
     padding: 10px 30px;
-    height: 10vh;
+    height: 8vh;
     font-size: 18px;
     z-index: 1000;
+    background-color: #00000070;
 }
 
 nav {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
 }
 
 nav ul {
@@ -85,12 +92,8 @@ nav ul li a:hover::after {
 }
 
 #about {
-    margin-top: 90vh;
+    margin-top: 80vh;
     padding: 10vh 0;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 main {
@@ -140,22 +143,139 @@ main {
 }
 
 .getintouch li {
-    display: inline-block; /* Ensures li elements are inline */
+    display: inline-block;
+    /* Ensures li elements are inline */
 }
 
 .getintouch li a {
-    display: block; /* Makes the anchor tag a block element */
+    display: block;
+    /* Makes the anchor tag a block element */
     text-decoration: none;
     background-color: black;
     color: white;
-    padding: 7px 22px; /* Adjust padding to increase button size */
-    font-size: 17px; /* Adjust font size as needed */
-    transition: transform 0.5s ease-in-out, background-color 0.3s ease; /* Smooth transition for background color */
+    padding: 7px 22px;
+    /* Adjust padding to increase button size */
+    font-size: 17px;
+    /* Adjust font size as needed */
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease;
+    /* Smooth transition for background color */
     border-radius: 10px;
 }
 
 .getintouch li a:hover {
-    background-color: #1a1919; /* Darken background color on hover */
+    background-color: #1a1919;
+    /* Darken background color on hover */
     transform: scale(1.1);
 }
 
+#skills {
+    margin-top: 80vh;
+    background-color: #ffffff;
+    height: 90vh;
+}
+
+.heading_softskills {
+    text-align: center;
+    color: black;
+    padding: 20px;
+}
+
+.heading_workskills {
+    text-align: center;
+    color: #1a1919;
+    margin-top: 7vh;
+}
+
+.onetofive {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    font-family: "Cinzel", serif;
+}
+
+.fivetoten {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    font-family: "Cinzel", serif;
+}
+
+.onetofive h4:hover {
+    transform: scale(1.03);
+}
+
+.fivetoten h4:hover {
+    transform: scale(1.03);
+}
+
+h4 {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.actualskills {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    font-family: "Cinzel", serif;
+}
+
+.actualskills h4:hover {
+    transform: scale(1.03);
+}
+
+#heading_experience {
+    font-family: "Cinzel", serif;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+/* #experience{
+    height: 100vh;
+    margin-top: 20vh;
+    width: 50vw;
+    margin-left: 25%;
+    background-color: black;
+    border-radius: 10px;
+} */
+
+#experience {
+    height: 100vh;
+    margin-top: 20vh;
+    width: 50vw;
+    margin-left: 25%;
+    background-color: #00000080;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    /* Regular shadow */
+}
+
+#experience::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle, rgba(85, 85, 85, 0.8) 0%, rgba(255, 255, 255, 0) 80%);
+    border-radius: 10px;
+}
+
+
+#experience .paragraphs {
+    display: inline;
+    text-align: center;
+}
+
+#experience .paragraphs .paras {
+    margin-top: 3vh;
+    font-size: 20px;
+}
