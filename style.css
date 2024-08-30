@@ -136,18 +136,18 @@ main {
     text-align: center;
 }
 
-.getintouch {
+.downloadCV {
     margin-left: 149px;
     margin-top: 20px;
     list-style: none;
 }
 
-.getintouch li {
+.downloadCV li {
     display: inline-block;
     /* Ensures li elements are inline */
 }
 
-.getintouch li a {
+.downloadCV li a {
     display: block;
     /* Makes the anchor tag a block element */
     text-decoration: none;
@@ -162,7 +162,7 @@ main {
     border-radius: 10px;
 }
 
-.getintouch li a:hover {
+.downloadCV li a:hover {
     background-color: #1a1919;
     /* Darken background color on hover */
     transform: scale(1.1);
@@ -237,15 +237,6 @@ h4 {
     margin-bottom: 3vh;
 }
 
-/* #experience{
-    height: 100vh;
-    margin-top: 20vh;
-    width: 50vw;
-    margin-left: 25%;
-    background-color: black;
-    border-radius: 10px;
-} */
-
 #experience {
     height: 100vh;
     margin-top: 20vh;
@@ -278,4 +269,42 @@ h4 {
 #experience .paragraphs .paras {
     margin-top: 3vh;
     font-size: 20px;
+}
+
+#certificates{
+    height: 50vh;
+    margin-top: 20vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    font-family: "Cinzel", serif;
+    font-size: 15px;
+    font-weight: 30px;
+    background-color: white;
+}
+
+#certificates a{
+    color: rgb(11, 11, 11);
+    list-style: none;
+    text-decoration: none;
+    height: 5vh;
+    width: 40vw;
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin-left: 90px;
+}
+
+
+#heading_certificates {
+    font-family: "Cinzel", serif;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 3vh;
+    color: black;
+}
+
+#certificates a:hover {
+    transform: scale(1.1);
+    color: #1a1919;
 }
