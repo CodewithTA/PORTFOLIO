@@ -144,27 +144,20 @@ main {
 
 .downloadCV li {
     display: inline-block;
-    /* Ensures li elements are inline */
 }
 
 .downloadCV li a {
     display: block;
-    /* Makes the anchor tag a block element */
     text-decoration: none;
     background-color: black;
     color: white;
     padding: 7px 22px;
-    /* Adjust padding to increase button size */
-    font-size: 17px;
-    /* Adjust font size as needed */
     transition: transform 0.5s ease-in-out, background-color 0.3s ease;
-    /* Smooth transition for background color */
     border-radius: 10px;
 }
 
 .downloadCV li a:hover {
     background-color: #1a1919;
-    /* Darken background color on hover */
     transform: scale(1.1);
 }
 
@@ -246,7 +239,6 @@ h4 {
     border-radius: 10px;
     position: relative;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    /* Regular shadow */
 }
 
 #experience::before {
@@ -307,4 +299,84 @@ h4 {
 #certificates a:hover {
     transform: scale(1.1);
     color: #1a1919;
+}
+
+/* Media Queries for Mobile Phones */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+        height: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .heading {
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .heading h1 {
+        font-size: 24px;
+    }
+
+    .heading p {
+        font-size: 14px;
+    }
+
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .downloadCV {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    #skills, #experience, #certificates {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: cover;
+    }
+
+    .heading h1 {
+        font-size: 20px;
+    }
+
+    .heading p {
+        font-size: 12px;
+    }
+
+    .box {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .downloadCV {
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    #skills, #experience, #certificates {
+        width: 95%;
+        margin: 20px auto;
+    }
 }
