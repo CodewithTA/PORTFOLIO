@@ -263,7 +263,7 @@ h4 {
     font-size: 20px;
 }
 
-#certificates{
+#certificates {
     height: 50vh;
     margin-top: 20vh;
     display: grid;
@@ -277,7 +277,7 @@ h4 {
     background-color: white;
 }
 
-#certificates a{
+#certificates a {
     color: rgb(11, 11, 11);
     list-style: none;
     text-decoration: none;
@@ -301,20 +301,89 @@ h4 {
     color: #1a1919;
 }
 
-/* Media Queries for Mobile Phones */
-@media (max-width: 768px) {
+/* Media Queries for Tablets and Mobile Phones */
+@media (max-width: 800px) {
     header {
         padding: 10px;
         height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #00000070;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0;
+    }
+
+    .menu-toggle span {
+        background-color: white;
+        height: 3px;
+        width: 25px;
+        margin: 3px 0;
+        transition: 0.3s;
+    }
+
+    #mobile-menu {
+        display: none;
+        position: absolute;
+        top: 51px;
+        width: 73%;
+        background-color: black;
+        z-index: 1000;
+    }
+
+    #mobile-menu.active {
+        display: block;
+        background-color: black;
+    }
+
+    /* Highlighted Changes: Ensure nav becomes visible when active */
+    nav {
+        display: none;
+        /* Initially hidden */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        /* Adjust top position to be below header */
+        left: 0;
+        background-color: black;
+        /* Black background for visibility */
+        z-index: 1000;
+        padding: 10px 0;
+        /* Added padding for spacing */
+    }
+
+    /* Highlighted Change: Ensure nav is displayed when mobile menu is active */
+    #mobile-menu.active nav {
+        display: flex;
+        /* Display flex when active */
     }
 
     nav ul {
         flex-direction: column;
         text-align: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
 
     nav ul li {
         margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: white;
+        /* White text for contrast */
+        text-decoration: none;
     }
 
     .heading {
@@ -346,7 +415,9 @@ h4 {
         margin: 20px 0;
     }
 
-    #skills, #experience, #certificates {
+    #skills,
+    #experience,
+    #certificates {
         width: 90%;
         margin: 20px auto;
     }
@@ -375,7 +446,9 @@ h4 {
         margin: 20px auto;
     }
 
-    #skills, #experience, #certificates {
+    #skills,
+    #experience,
+    #certificate {
         width: 95%;
         margin: 20px auto;
     }

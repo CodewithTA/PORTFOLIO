@@ -18,7 +18,12 @@
 
 <body>
     <header>
-        <nav>
+        <button class="menu-toggle" id="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="mobile-menu">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -42,9 +47,8 @@
         </div>
 
         <div class="downloadCV">
-            <li><a href="https://drive.google.com/file/d/1Qo9rEcEjT-0HZpO34kebwUs80hg9gEOa/view?usp=sharing">Download CV</a></li>
+            <li><a href="">Download CV</a></li>
         </div>
-
 
         <div id="about">
             <h2 class="centered-text">About Me</h2>
@@ -91,10 +95,11 @@
             <h2 class="heading_workskills">Work Skills</h2>
             <div class="actualskills">
                 <h4>C</h4>
-                <h4>HTML</h4>
-                <h4>CSS</h4>
+                <h4>DSA</h4>
                 <h4>SQL</h4>
+                <h4>HTML</h4>
             </div>
+            <div class="work_skills"></div>
         </div>
 
         <div id="experience">
@@ -132,8 +137,32 @@
             <a href="https://drive.google.com/file/d/1UxMLPx0DmKD_8Ir3gB-TAxKhIuZ3LY2x/view?usp=sharing">Pawzz Welfare
                 Foundation</a>
         </div>
-
     </main>
+
+    <script>
+        // Toggle mobile menu visibility
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+            var nav = document.getElementById('mobile-menu');
+            nav.classList.toggle('active');
+        });
+    
+        // Close the menu and scroll to the corresponding section when any menu link is clicked
+        document.querySelectorAll('#mobile-menu nav ul li a').forEach(function(link) {
+            link.addEventListener('click', function () {
+                // Close the mobile menu
+                document.getElementById('mobile-menu').classList.remove('active');
+    
+                // Smooth scroll to the corresponding section
+                var sectionId = this.getAttribute('href').substring(1); // Get section ID without the #
+                var section = document.getElementById(sectionId);
+    
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' }); // Smoothly scroll to the section
+                }
+            });
+        });
+    </script>
+    
 </body>
 
 </html>
